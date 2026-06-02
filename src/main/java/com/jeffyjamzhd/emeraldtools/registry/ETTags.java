@@ -4,6 +4,7 @@ import btw.item.BTWTags;
 import com.jeffyjamzhd.emeraldtools.EmeraldToolsAddon;
 
 import static com.jeffyjamzhd.emeraldtools.registry.ETItems.*;
+import static com.jeffyjamzhd.emeraldtools.registry.ETBlocks.*;
 
 public class ETTags {
     public static void register() {
@@ -16,5 +17,9 @@ public class ETTags {
         BTWTags.highQualityHoes.add(EMERALD_HOE);
         BTWTags.swords.add(EMERALD_SWORD);
         BTWTags.shears.add(EMERALD_SHEARS);
+
+        EmeraldToolsAddon.info("Appending blocks to tags");
+
+        BTWTags.oreStorageBlocks.add(EMERALD_INGOT_BLOCK);
     }
 }

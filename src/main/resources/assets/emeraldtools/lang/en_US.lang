@@ -8,3 +8,5 @@ item.emerald_pickaxe.name=Emerald Pickaxe
 item.emerald_axe.name=Emerald Axe
 item.emerald_hoe.name=Emerald Hoe
 item.emerald_shears.name=Emerald Shears
+
+tile.emeraldIngotBlock.name=Block of Emerald Ingots

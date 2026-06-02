@@ -1,6 +1,8 @@
 package com.jeffyjamzhd.emeraldtools;
 
 import api.BTWAddon;
+import api.block.beacon.BeaconEffectHandler;
+import btw.block.tileentity.beacon.BTWBeaconEffects;
 import com.jeffyjamzhd.emeraldtools.registry.*;
 import net.minecraft.src.EnumToolMaterial;
 import org.apache.logging.log4j.LogManager;
@@ -24,11 +26,15 @@ public class EmeraldToolsAddon extends BTWAddon {
     public void initialize() {
         info("BTW Emerald Tools init phase!");
 
+        ETBlocks.register();
         ETItems.register();
         ETTags.register();
         ETRecipes.register();
         ETTrades.register();
         ETAchievements.register();
+        
+        // Add beacon effect
+        BeaconEffectHandler.addBeaconEffect(ETBlocks.EMERALD_INGOT_BLOCK.blockID, BTWBeaconEffects.LOOTING_EFFECT);
     }
 
     /**

@@ -29,32 +29,37 @@ public class ETRecipes {
         // Recycling
         manager.addRecipe(
                 new ItemStack(ETItems.EMERALD_ALLOY, 1),
-                new TagOrStack[]{new ItemStack(ETItems.EMERALD_SHOVEL)},
+                new TagOrStack[]{new ItemStack(ETItems.EMERALD_SHOVEL, 1, Short.MAX_VALUE)},
                 false
         );
         manager.addRecipe(
                 new ItemStack(ETItems.EMERALD_ALLOY, 1),
-                new TagOrStack[]{new ItemStack(ETItems.EMERALD_HOE)},
+                new TagOrStack[]{new ItemStack(ETItems.EMERALD_HOE, 1, Short.MAX_VALUE)},
                 false
         );
         manager.addRecipe(
                 new ItemStack(ETItems.EMERALD_ALLOY, 2),
-                new TagOrStack[]{new ItemStack(ETItems.EMERALD_SWORD)},
+                new TagOrStack[]{new ItemStack(ETItems.EMERALD_SWORD, 1, Short.MAX_VALUE)},
                 false
         );
         manager.addRecipe(
                 new ItemStack(ETItems.EMERALD_ALLOY, 2),
-                new TagOrStack[]{new ItemStack(ETItems.EMERALD_SHEARS)},
+                new TagOrStack[]{new ItemStack(ETItems.EMERALD_SHEARS, 1, Short.MAX_VALUE)},
                 false
         );
         manager.addRecipe(
                 new ItemStack(ETItems.EMERALD_ALLOY, 2),
-                new TagOrStack[]{new ItemStack(ETItems.EMERALD_AXE)},
+                new TagOrStack[]{new ItemStack(ETItems.EMERALD_AXE, 1, Short.MAX_VALUE)},
                 false
         );
         manager.addRecipe(
                 new ItemStack(ETItems.EMERALD_ALLOY, 3),
-                new TagOrStack[]{new ItemStack(ETItems.EMERALD_PICKAXE)},
+                new TagOrStack[]{new ItemStack(ETItems.EMERALD_PICKAXE, 1, Short.MAX_VALUE)},
+                false
+        );
+        manager.addRecipe(
+                new ItemStack(ETItems.EMERALD_ALLOY, 9),
+                new TagOrStack[]{new ItemStack(ETBlocks.EMERALD_INGOT_BLOCK)},
                 false
         );
     }
@@ -103,5 +108,11 @@ public class ETRecipes {
                 "e ",
                 " e",
                 'e', ETItems.EMERALD_ALLOY);
+        CraftingManager.getInstance().addRecipe(new ItemStack(ETBlocks.EMERALD_INGOT_BLOCK),
+                "eee",
+                "eee",
+                "eee",
+                'e', ETItems.EMERALD_ALLOY);
+        CraftingManager.getInstance().addShapelessRecipe(new ItemStack(ETItems.EMERALD_ALLOY, 9), new ItemStack(ETBlocks.EMERALD_INGOT_BLOCK));
     }
 }
